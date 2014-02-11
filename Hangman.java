@@ -3,38 +3,9 @@ import java.util.Scanner;
 import acm.program.*;
 import java.awt.*;
 
-/**
- * @author sat
- *
- */
 @SuppressWarnings("serial")
 public class Hangman extends GraphicsProgram {
 
-	/* (non-Javadoc)
-	 * @see acm.program.GraphicsProgram#run()
-	 */
-	
-	
-	public void run() {
-		
-		/* AMIR EXPLANATION OF THREADS
-		 * 
-		Thread t = new Thread() {
-			public void run() {
-				while(true) {
-					System.out.println("hi");
-					try {
-						Thread.sleep(1000);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-				}
-			}
-			
-		};
-		t.start();
-		*/
-	
 		Scanner sc = new Scanner(System.in);
 		
 		//HangmanSchrift
@@ -56,14 +27,12 @@ public class Hangman extends GraphicsProgram {
 		labell.setLocation(50.5,140.5);
 		labell.setFont("arial-bold-14");
 		
-		
 		//UnterstrichH
 		GLine lineH = new GLine(100, 105, 110, 105);
 		add(lineH);
 		
 		//BuchstabeH
 		GLabel labelH = new GLabel("H", 100, 105);
-		
 		
 		//UnterstrichA
 		GLine lineA = new GLine(115, 105, 125, 105);
@@ -72,14 +41,12 @@ public class Hangman extends GraphicsProgram {
 		//BuchstabeA
 		GLabel labelA = new GLabel("A", 115, 105);
 		
-		
 		//UnterstrichN
 		GLine lineN = new GLine(130, 105, 140, 105);
 		add(lineN);
 		
 		//BuchstabeN
 		GLabel labelN = new GLabel("N", 130, 105);
-		
 		
 		//UnterstrichG
 		GLine lineG = new GLine(145, 105, 155, 105);
@@ -88,14 +55,12 @@ public class Hangman extends GraphicsProgram {
 		//BuchstabeG
 		GLabel labelG = new GLabel("G", 145, 105);
 		
-		
 		//UnterstrichM
 		GLine lineM = new GLine(160, 105, 170, 105);
 		add(lineM);
 		
 		//BuchstabeM
 		GLabel labelM = new GLabel("M", 160, 105);
-		
 		
 		//UnterstrichA2
 		GLine lineA2 = new GLine(175, 105, 185, 105);
@@ -104,14 +69,12 @@ public class Hangman extends GraphicsProgram {
 		//BuchstabeA2
 		GLabel labelA2 = new GLabel("A", 175, 105);
 		
-		
 		//UnterstrichN2
 		GLine lineN2 = new GLine(190, 105, 200, 105);
 		add(lineN2);
 		
 		//BuchstabeN2
 		GLabel labelN2 = new GLabel("N", 190, 105);
-		
 		
 		//oval3.setColor(Color.red); 		# färbt
 		//oval3.setLocation(20.5, 20.5); 	# setzt auf x, y
@@ -182,10 +145,7 @@ public class Hangman extends GraphicsProgram {
 		GOval oval5b = new GOval(175, 200, 3, 3);//R_Auge
 		GOval oval5c = new GOval(169, 207, 7, 7);//Mund
 		
-		
 		System.out.println("Dies ist ein Spiel namens Hangman. Bitte raten sie das Wort.");
-				
-		
 		
 		int state = 0;
 		String buchstabe;
@@ -564,64 +524,3 @@ public class Hangman extends GraphicsProgram {
 		sc.close();
 	}
 }		
-	/*	
-	 	//Boden
-	 	GLine line1 = new GLine(20, 350, 200, 350);
-		line1.setColor(Color.red);
-		add(line1);
-	 	
-	 	//Hügel
-		GOval oval1 = new GOval(40, 305, 100, 100);
-		add(oval1);
-		// mein Halbkreis entsteht durch überdecken des Kreises mit einem rect
-		GRect rect1 = new GRect(20, 351, 150, 55);
-		rect1.setColor(Color.white);
-		rect1.setFilled(true);
-		rect1.setFillColor(Color.white);
-		add(rect1);
-		
-		//pfahl
-		GLine line2 = new GLine(90, 305, 90, 151);
-		add(line2);
-		
-		//balken
-		GLine line3 = new GLine(60, 151, 190, 151);
-		add(line3);
-		
-		//diagonale
-		GLine line4 = new GLine(90, 201, 135, 151);
-		add(line4);
-		
-		//kreis im stützbalken 
-		GOval oval2 = new GOval(96, 156, 12, 12);
-		add(oval2);
-		
-		//strick
-		GLine line5 = new GLine(170, 151, 170, 195);
-		add(line5);
-		
-		//kopf
-		GOval oval3 = new GOval(160, 195, 20, 20);
-		add(oval3);
-		
-		//hals
-		GLine line6 = new GLine(170, 216, 170, 260);
-		add(line6);
-		
-		//armL
-		GLine line7 = new GLine(150, 240, 170, 230);
-		add(line7);
-		
-		//armR
-		GLine line8 = new GLine(170, 230, 190, 240);
-		add(line8);
-		
-		//beinL
-		GLine line9 = new GLine(170, 260, 160, 290);
-		add(line9);
-		
-		//beinR
-		GLine line10 = new GLine(170, 260, 180, 290);
-		add(line10);
-		
-		*/
